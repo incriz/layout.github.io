@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="russian">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:ital,wght@0,600;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layout</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!--- Sprite svg --->
+    <svg style="display: none;">
+
+        <symbol id="facebook" viewBox="0 0 48.605 48.605">
+            <g>
+                <path d="M34.094,8.688h4.756V0.005h-8.643c-0.721-0.03-9.51-0.198-11.788,8.489c-0.033,0.091-0.761,2.157-0.761,6.983l-7.903,0.024
+		v9.107l7.913-0.023v24.021h12.087v-24h8v-9.131h-8v-2.873C29.755,10.816,30.508,8.688,34.094,8.688z M35.755,17.474v5.131h-8v24
+		h-8.087V22.579l-7.913,0.023v-5.107l7.934-0.023l-0.021-1.017c-0.104-5.112,0.625-7.262,0.658-7.365
+		c1.966-7.482,9.473-7.106,9.795-7.086l6.729,0.002v4.683h-2.756c-4.673,0-6.338,3.054-6.338,5.912v4.873L35.755,17.474
+		L35.755,17.474z" />
+            </g>
+        </symbol>
+
+        <symbol id="twitter" viewBox="0 0 512 512">
+            <g>
+                <path
+                    d="M507.413,93.394c-3.709-2.51-8.607-2.383-12.174,0.327c-3.612,2.735-9.474,5.087-16.138,7.016
+                    c18.245-21.301,18.623-35.541,18.408-38.893c-0.245-3.801-2.541-7.168-5.985-8.791c-3.459-1.612-7.51-1.23-10.587,1.005
+                    c-21.893,15.908-43.689,19.373-56.791,19.76c-20.337-19.342-46.704-29.944-74.74-29.944c-60.271,0-109.307,49.684-109.307,110.751
+                    c0,4.944,0.327,9.878,0.969,14.771C138.176,167.645,54.665,69.155,53.803,68.119c-2.184-2.617-5.5-4.041-8.929-3.714
+                    c-3.398,0.296-6.444,2.235-8.148,5.189c-29.005,50.322-11.286,94.725,6.505,121.327c-1.837-1.092-3.342-2.097-4.372-2.857
+                    c-3.143-2.337-7.337-2.725-10.852-0.995c-3.521,1.735-5.771,5.286-5.837,9.209c-0.786,48.255,21.764,76.49,43.674,92.49
+                    c-2.372,0.327-4.597,1.459-6.266,3.276c-2.51,2.724-3.393,6.576-2.311,10.122c15.194,49.735,52.041,67.352,76.373,73.587
+                    c-49.22,37.138-120.557,25.016-121.348,24.867c-4.73-0.831-9.464,1.663-11.408,6.082c-1.939,4.413-0.612,9.587,3.225,12.51
+                    c52.464,40.041,115.21,48.913,160.53,48.913c34.272,0,58.573-5.077,60.91-5.582c228.617-54.179,235.864-263.063,235.394-298.66
+                    c42.888-39.929,49.633-55.255,50.684-59.067C512.811,100.502,511.117,95.91,507.413,93.394z M443.283,151.752
+                    c-2.33,2.143-3.56,5.235-3.346,8.398c0.036,0.561,3.536,57.179-21.694,120.266c-33.709,84.291-100.164,138.725-197.307,161.746
+                    c-1.041,0.219-90.905,18.831-169.792-18.689c33.725-1.414,80.429-10.913,113.292-47.806c2.745-3.077,3.398-7.833,1.709-11.593
+                    c-1.689-3.75-5.439-6.51-9.551-6.51c-0.02,0-0.041,0-0.071,0c-2.76,0-50.337-0.357-73.133-46.306
+                    c9.219,0.398,20.24-0.145,29.122-4.237c4.092-1.888,6.51-6.1,6.005-10.574c-0.505-4.475-3.821-8.079-8.23-9.008
+                    c-2.556-0.541-57.649-12.836-66.143-72.693c8.464,3.526,19.015,6.257,29.51,4.685c4.031-0.602,7.332-3.5,8.474-7.413
+                    c1.138-3.908-0.107-8.13-3.184-10.809c-2.383-2.07-54.327-48.273-30.541-107.973c28.158,29.332,108.46,102.368,205.833,96.786
+                    c3.107-0.179,5.975-1.74,7.82-4.25c1.843-2.51,2.471-5.709,1.71-8.728c-1.837-7.316-2.77-14.857-2.77-22.418
+                    c0-49.546,39.658-89.853,88.409-89.853c23.842,0,46.203,9.515,62.97,26.796c1.923,1.985,4.556,3.122,7.322,3.174
+                    c9.658,0.092,25.561-0.949,43.531-7.633c-5.359,6.275-12.852,13.622-23.332,21.852c-3.622,2.847-4.954,7.735-3.276,12.026
+                    c1.684,4.301,6.056,7.02,10.566,6.607c2.112-0.168,12.352-1.071,24.352-3.505C464.662,131.4,455.494,140.523,443.283,151.752z" />
+            </g>
+        </symbol>
+
+        <symbol id="telegram" viewBox="0 0 32 32">
+            <g>
+                <path
+                    d="M 26.070313 3.996094 C 25.734375 4.011719 25.417969 4.109375 25.136719 4.21875 L 25.132813 4.21875 C 24.847656 4.332031 23.492188 4.902344 21.433594 5.765625 C 19.375 6.632813 16.703125 7.757813 14.050781 8.875 C 8.753906 11.105469 3.546875 13.300781 3.546875 13.300781 L 3.609375 13.277344 C 3.609375 13.277344 3.25 13.394531 2.875 13.652344 C 2.683594 13.777344 2.472656 13.949219 2.289063 14.21875 C 2.105469 14.488281 1.957031 14.902344 2.011719 15.328125 C 2.101563 16.050781 2.570313 16.484375 2.90625 16.722656 C 3.246094 16.964844 3.570313 17.078125 3.570313 17.078125 L 3.578125 17.078125 L 8.460938 18.722656 C 8.679688 19.425781 9.949219 23.597656 10.253906 24.558594 C 10.433594 25.132813 10.609375 25.492188 10.828125 25.765625 C 10.933594 25.90625 11.058594 26.023438 11.207031 26.117188 C 11.265625 26.152344 11.328125 26.179688 11.390625 26.203125 C 11.410156 26.214844 11.429688 26.21875 11.453125 26.222656 L 11.402344 26.210938 C 11.417969 26.214844 11.429688 26.226563 11.441406 26.230469 C 11.480469 26.242188 11.507813 26.246094 11.558594 26.253906 C 12.332031 26.488281 12.953125 26.007813 12.953125 26.007813 L 12.988281 25.980469 L 15.871094 23.355469 L 20.703125 27.0625 L 20.8125 27.109375 C 21.820313 27.550781 22.839844 27.304688 23.378906 26.871094 C 23.921875 26.433594 24.132813 25.875 24.132813 25.875 L 24.167969 25.785156 L 27.902344 6.65625 C 28.007813 6.183594 28.035156 5.742188 27.917969 5.3125 C 27.800781 4.882813 27.5 4.480469 27.136719 4.265625 C 26.769531 4.046875 26.40625 3.980469 26.070313 3.996094 Z M 25.96875 6.046875 C 25.964844 6.109375 25.976563 6.101563 25.949219 6.222656 L 25.949219 6.234375 L 22.25 25.164063 C 22.234375 25.191406 22.207031 25.25 22.132813 25.308594 C 22.054688 25.371094 21.992188 25.410156 21.667969 25.28125 L 15.757813 20.75 L 12.1875 24.003906 L 12.9375 19.214844 C 12.9375 19.214844 22.195313 10.585938 22.59375 10.214844 C 22.992188 9.84375 22.859375 9.765625 22.859375 9.765625 C 22.886719 9.3125 22.257813 9.632813 22.257813 9.632813 L 10.082031 17.175781 L 10.078125 17.15625 L 4.242188 15.191406 L 4.242188 15.1875 C 4.238281 15.1875 4.230469 15.183594 4.226563 15.183594 C 4.230469 15.183594 4.257813 15.171875 4.257813 15.171875 L 4.289063 15.15625 L 4.320313 15.144531 C 4.320313 15.144531 9.53125 12.949219 14.828125 10.71875 C 17.480469 9.601563 20.152344 8.476563 22.207031 7.609375 C 24.261719 6.746094 25.78125 6.113281 25.867188 6.078125 C 25.949219 6.046875 25.910156 6.046875 25.96875 6.046875 Z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__log">
+                    <img class="header__logo" src="img/logo3.png">
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" data-scroll="#features">О компании</a>
+                    <a class="nav__link" href="#" data-scroll="#works">Работы</a>
+                    <a class="nav__link" href="#" data-scroll="#team">Наша команда</a>
+                    <a class="nav__link" href="#" data-scroll="#reviews">Отзывы</a>
+                    <a class="nav__link" href="#" data-scroll="#order">Контакты</a>
+                </nav>
+
+                <button class="burger" type="button" id="navToggle">
+                    <span class="burger__item">Menu</span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="intro" id="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">Мир паркетов</h1>
+                <h2 class="intro__subtitle">С 2000 года наша компания проектирует, производит, продает, устанавливает
+                    деревянные полы высшего качества.</h2>
+                <!-- <a class="btn  btn--red" href="#">Find Out More</a> -->
+                <button class="btn  btn--red" type="button">Узнать больше</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="features">
+        <div class="features">
+            <div class="features__item">
+                <img class="features__icon" src="img/features/icon1.png" alt="">
+                <h4 class="features__title">Качественная работа</h4>
+                <div class="features__text">Работы по укладке выполняют сертифицированные паркетчики с многолетним
+                    опытом</div>
+            </div>
+
+            <div class="features__item">
+                <img class="features__icon" src="img/features/icon2.png" alt="">
+                <h4 class="features__title">Индивидуальные заказы</h4>
+                <div class="features__text">Наши мастера реализуют любую вашу идею — мы умеем создавать изделия из любой
+                    древесины, любой формы, с любым финишным покрытием</div>
+            </div>
+
+            <div class="features__item">
+                <img class="features__icon" src="img/features/icon3.png" alt="">
+                <h4 class="features__title">Современные дизайнеры</h4>
+                <div class="features__text">Каждый разработанный и реализованный интерьер от наших дизайнеров считается
+                    оригинальным и вызывает у заказчиков самые яркие чувства</div>
+            </div>
+
+            <div class="features__item">
+                <img class="features__icon" src="img/features/icon4.png" alt="">
+                <h4 class="features__title">Служба поддержки</h4>
+                <div class="features__text">Всегда готовы помочь клиенту разобраться в вопросе</div>
+            </div>
+
+            <div class="features__item">
+                <img class="features__icon" src="img/features/icon5.png" alt="">
+                <h4 class="features__title">Гарантия и возврат</h4>
+                <div class="features__text">Любые товары, приобретенные в нашем-магазине, в случае неисправности
+                    обслуживаются по гарантии </div>
+            </div>
+
+            <div class="features__item">
+                <img class="features__icon" src="img/features/icon6.png" alt="">
+                <h4 class="features__title">Быстрая доставка</h4>
+                <div class="features__text">Точная дата и интервал доставки согласовывается с менеджером во время
+                    подтверждения заказа. Накануне дня доставки менеджер свяжется с вами для подтверждения даты и
+                    времени</div>
+            </div>
+        </div>
+    </div>
+    <!--/ container -->
+
+    <div class="works" id="works">
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work1.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work2.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work3.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work4.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work5.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work6.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work7.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+
+        <div class="works__item">
+            <img class="works__photo" src="img/work/work8.jpg" alt="">
+            <div class="workks__content">
+                <div class="works__title">Project name</div>
+                <div class="works__text">User interface Design</div>
+            </div>
+        </div>
+    </div>
+    <!--/ works -->
+
+
+    <div class="team" id="team">
+        <div class="container">
+            <div class="team__inner">
+                <div class="team__item">
+                    <img class="team__photo" src="img/team/team1.jpg" alt="">
+                    <div class="team__name">Ковалев Павел</div>
+                    <div class="team__prof">Директор компании</div>
+                    <div class="team__text">
+                        <p>Управляющий директор, отвечающий за доходы и убытки компании.</p>
+                    </div>
+                    <div class="social">
+                        <a class="social__link" href="https://ru-ru.facebook.com/VinDiesel" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="social__link" href="https://twitter.com/vindiesel" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="social__link" href="https://twitter.com/vindiesel" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team__item">
+                    <img class="team__photo" src="img/team/team2.jpg" alt="">
+                    <div class="team__name">Зайцев Дмитрий</div>
+                    <div class="team__prof">Дизайнер</div>
+                    <div class="team__text">
+                        <p>Отвечает за оформление ваших заказов. Предпочитает аккуратный минимализм и строгую классику,
+                            также работает и с другими стилями по желанию заказчика</p>
+                    </div>
+                </div>
+
+                <div class="team__item">
+                    <img class="team__photo" src="img/team/team3.jpg" alt="">
+                    <div class="team__name">Кузнецов Роман</div>
+                    <div class="team__prof">Старший специалист</div>
+                    <div class="team__text">
+                        <p>Наша компания регулярно проводит мониторинг цен на соответствующие услуги. Мы устанавливаем
+                            их на максимально низком уровне. В сочетании с хорошим качеством работ это позволяет нам
+                            обогнать конкурентов.</p>
+                    </div>
+                </div>
+
+                <div class="team__item">
+                    <img class="team__photo" src="img/team/team4.jpg" alt="">
+                    <div class="team__name">Зубов Александр</div>
+                    <div class="team__prof">Специалист по укладке</div>
+                    <div class="team__text">
+                        <p>Я являюсь мастером-универсалом ремонтно-отделочных. Ремонт для меня как творчество, очень
+                            люблю свою работу, каждый объект приносит новые впечатления, всегда слежу за качеством, как
+                            работ, так и материала. </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--/ container -->
+    </div>
+    <!--/ team -->
+
+
+    <div class="reviews" id="reviews">
+        <div class="container">
+            <div class="reviews__slider" id="reviewsSlider">
+                <div class="slick__item">
+                    <div>
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img class="reviews__img" src="img/reviews/reviews1.jpg" alt="">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">"Огромный ассортимент, действительно качественный товар. А еще в
+                                этом
+                                магазине работают отличные менеджеры, которые реально помогают выбрать необходимый
+                                материал. "
+                            </div>
+                            <div class="reviews__author">Черняева Мария, Покупатель</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div>
+                <div class="reviews__item">
+                    <div class="reviews__item">
+                        <div class="reviews__photo">
+                            <img class="reviews__img" src="img/reviews/reviews2.jpg" alt="">
+                        </div>
+                        <div class="reviews__content">
+                            <div class="reviews__text">"Крутая фирма! Дружелюбный коллектив, хорошая заработная плата, уверенность в завтрашнем дне! Вот что вас ждет, если будете у нас работать!"
+                            </div>
+                            <div class="reviews__author">Александр Самохин, Менеджер</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--/ container -->
+
+        <!--/ reviews -->
+    </div>
+
+
+
+
+    <div class="оrder" id="order">
+        <div class="container">
+            <h3 class="оrder__title">Вы ищете работу?</h3>
+            <div class="оrder__text">
+                <p>Тогда просто нажмите на кнопку</p>
+            </div>
+            <button class="btn btn--red btn--long" id="button">
+                Показать номер
+            </button>
+
+        </div>
+        <!-- / container -->
+    </div>
+    <!-- / download -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__block">
+                    <h4 class="foother__title">Место нахождения</h4>
+                    <address class="footer__address">
+                        <div>г. Иваново</div>
+                        <div>ул. Садовая 12</div>
+                    </address>
+                </div>
+
+                <div class="footer__block">
+                    <h4 class="foother__title">Контакты</h4>
+
+                    <div class="social social--footer">
+                        <a class="social__link" href="https://vk.com/mr.flik" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                        <a class="social__link" href="https://vk.com/mr.flik" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                        <a class="social__link" href="https://vk.com/mr.flik" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="footer__block">
+                    <h4 class="foother__title">Мир паркетов</h4>
+                    <div class="footer__text">
+                        <p>Всегда ждет вас в гости!</p>
+                    </div>
+                </div>
+
+            </div>
+            <!--/ footer__inner -->
+        </div>
+        <!--/ container -->
+
+
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
